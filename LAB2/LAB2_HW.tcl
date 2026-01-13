@@ -160,11 +160,6 @@ if {$module_name ne ""} {
     puts $fp "        \$finish;"
     puts $fp "    end"
     puts $fp ""
-    puts $fp "    initial begin"
-    puts $fp "        \$dumpfile(\"${module_name}.vcd\");"
-    puts $fp "        \$dumpvars(0, tb_${module_name});"
-    puts $fp "    end"
-    puts $fp ""
     puts $fp "endmodule"
     
     close $fp
