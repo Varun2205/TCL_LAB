@@ -1,0 +1,74 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : aes_ip
+Version: T-2022.03-SP5
+Date   : Sat Mar  8 08:07:25 2025
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32hvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: PADDR[3] (input port clocked by CLK)
+  Endpoint: PRDATA[0] (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes_ip             35000                 saed32hvt_ss0p95v125c
+  host_interface     8000                  saed32hvt_ss0p95v125c
+  aes_core           35000                 saed32hvt_ss0p95v125c
+  datapath           35000                 saed32hvt_ss0p95v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                            50.00      50.00
+  input external delay                                  100.00     150.00 f
+  PADDR[3] (in)                                           0.00     150.00 f
+  HOST_INTERFACE/PADDR[3] (host_interface)                0.00     150.00 f
+  HOST_INTERFACE/U164/Y (INVX1_HVT)                       0.02     150.02 r
+  HOST_INTERFACE/U158/Y (AND3X1_HVT)                      0.11     150.13 r
+  HOST_INTERFACE/U97/Y (AND2X1_HVT)                       0.08     150.21 r
+  HOST_INTERFACE/U93/Y (AND3X1_HVT)                       0.11     150.31 r
+  HOST_INTERFACE/col_wr_en (host_interface)               0.00     150.31 r
+  AES_CORE/write_en (aes_core)                            0.00     150.31 r
+  AES_CORE/U8/Y (AND3X1_HVT)                              0.12     150.43 r
+  AES_CORE/AES_CORE_DATAPATH/col_en_host[0] (datapath)
+                                                          0.00     150.43 r
+  AES_CORE/AES_CORE_DATAPATH/U2551/Y (AO221X1_HVT)        0.12     150.55 r
+  AES_CORE/AES_CORE_DATAPATH/U272/Y (INVX1_HVT)           0.09     150.65 f
+  AES_CORE/AES_CORE_DATAPATH/U1497/Y (INVX1_HVT)          0.10     150.75 r
+  AES_CORE/AES_CORE_DATAPATH/U2550/Y (OA21X1_HVT)         0.12     150.87 r
+  AES_CORE/AES_CORE_DATAPATH/U2548/Y (AND4X1_HVT)         0.14     151.01 r
+  AES_CORE/AES_CORE_DATAPATH/U1864/Y (NBUFFX2_HVT)        0.07     151.08 r
+  AES_CORE/AES_CORE_DATAPATH/U1488/Y (NBUFFX2_HVT)        0.07     151.16 r
+  AES_CORE/AES_CORE_DATAPATH/U2546/Y (AO22X1_HVT)         0.09     151.25 r
+  AES_CORE/AES_CORE_DATAPATH/U2545/Y (AO221X1_HVT)        0.12     151.37 r
+  AES_CORE/AES_CORE_DATAPATH/iv_bus[0] (datapath)         0.00     151.37 r
+  AES_CORE/iv_out[0] (aes_core)                           0.00     151.37 r
+  HOST_INTERFACE/iv_bus[0] (host_interface)               0.00     151.37 r
+  HOST_INTERFACE/U151/Y (AO22X1_HVT)                      0.10     151.47 r
+  HOST_INTERFACE/U150/Y (AO22X1_HVT)                      0.09     151.56 r
+  HOST_INTERFACE/U148/Y (OA21X1_HVT)                      0.09     151.65 r
+  HOST_INTERFACE/PRDATA[0] (host_interface)               0.00     151.65 r
+  PRDATA[0] (out)                                         0.00     151.65 r
+  data arrival time                                                151.65
+
+  clock CLK (rise edge)                                2000.00    2000.00
+  clock network delay (ideal)                            50.00    2050.00
+  output external delay                                -410.00    1640.00
+  data required time                                              1640.00
+  --------------------------------------------------------------------------
+  data required time                                              1640.00
+  data arrival time                                               -151.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                     1488.35
+
+
+1
