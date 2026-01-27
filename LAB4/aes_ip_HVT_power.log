@@ -1,0 +1,73 @@
+****************************************
+Report : power
+        -analysis_effort low
+Design : aes_ip
+Version: T-2022.03-SP5
+Date   : Sat Mar  8 08:07:26 2025
+****************************************
+
+
+Library(s) Used:
+
+    saed32hvt_ss0p95v125c (File: /home/student/workshop_PD/synthesis/inputs/saed32hvt_ss0p95v125c.db)
+
+
+Operating Conditions: ss0p95v125c   Library: saed32hvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+aes_ip                 35000             saed32hvt_ss0p95v125c
+host_interface         8000              saed32hvt_ss0p95v125c
+aes_core               35000             saed32hvt_ss0p95v125c
+datapath               35000             saed32hvt_ss0p95v125c
+control_unit           8000              saed32hvt_ss0p95v125c
+data_swap_0            8000              saed32hvt_ss0p95v125c
+shift_rows             ForQA             saed32hvt_ss0p95v125c
+sBox                   8000              saed32hvt_ss0p95v125c
+key_expander           8000              saed32hvt_ss0p95v125c
+mix_columns            8000              saed32hvt_ss0p95v125c
+sBox_8_3               8000              saed32hvt_ss0p95v125c
+data_swap_1            8000              saed32hvt_ss0p95v125c
+sBox_8_0               8000              saed32hvt_ss0p95v125c
+sBox_8_1               8000              saed32hvt_ss0p95v125c
+sBox_8_2               8000              saed32hvt_ss0p95v125c
+datapath_DW01_inc_0_DW01_inc_2
+                       ForQA             saed32hvt_ss0p95v125c
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   2.6206 uW   (99%)
+  Net Switching Power  =  39.1918 nW    (1%)
+                         ---------
+Total Dynamic Power    =   2.6598 uW  (100%)
+
+Cell Leakage Power     = 269.7723 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      2.5920            0.0000            0.0000            2.5920  (   0.95%)  i
+register       -6.2609e-03        6.4114e-04        1.2186e+08          121.8533 (  44.73%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  3.4825e-02        3.8551e-02        1.4791e+08          147.9868  (  54.32%)
+--------------------------------------------------------------------------------------------------
+Total              2.6206 uW     3.9192e-02 uW     2.6977e+08 pW       272.4321 uW
+1
